@@ -5,7 +5,7 @@ license_name: stable-cascade-nc-community
 license_link: LICENSE
 ---
 
-# Stable Cascade Model Card
+# Stable Cascade
 
 <!-- Provide a quick summary of what the model is/does. -->
 <img src="figures/collage_1.jpg" width="800">
