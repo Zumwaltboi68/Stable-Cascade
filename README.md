@@ -5,7 +5,7 @@ license_name: stable-cascade-nc-community
 license_link: LICENSE
 ---
 
-# Stable Video Diffusion Image-to-Video Model Card
+# Stable Cascade Text-to-Image Model Card
 
 <!-- Provide a quick summary of what the model is/does. -->
 ![image]()
