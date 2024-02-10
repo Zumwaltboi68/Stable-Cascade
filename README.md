@@ -63,6 +63,37 @@ According to our evaluation, Stable Cascade performs best in both prompt alignme
 comparisons. The above picture shows the results from a human evaluation using a mix of parti-prompts (link) and 
 aesthetic prompts. Specifically, the comparison was held against Playground v2, SDXL Turbo, SDXL and Würstchen v2.
 
+## Code Example
+```python
+import torch
+from diffusers import StableCascadeDecoderPipeline, StableCascadePriorPipeline
+
+device = "cuda"
+dtype = torch.bfloat16
+num_images_per_prompt = 2
+
+prior = StableCascadePriorPipeline.from_pretrained("stabilityai/stable-cascade", torch_dtype=dtype).to(device)
+decoder = StableCascadeDecoderPipeline.from_pretrained("stabilityai/stable-cascade",  torch_dtype=dtype).to(device)
+
+prompt = "Anthropomorphic cat dressed as a pilot"
+negative_prompt = ""
+
+prior_output = prior_pipeline(
+    prompt=caption,
+    height=1024,
+    width=1024,
+    negative_prompt=negative_prompt,
+    guidance_scale=4.0,
+    num_images_per_prompt=num_images_per_prompt,
+)
+decoder_output = decoder_pipeline(
+    image_embeddings=prior_output.image_embeddings,
+    prompt=caption,
+    negative_prompt=negative_prompt,
+    guidance_scale=0.0,
+    output_type="pil",
+).images
+```
 
 ## Uses
 
