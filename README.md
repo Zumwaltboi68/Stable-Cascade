@@ -61,7 +61,8 @@ its small size.
 <img height="300" src="figures/comparison.png"/>
 According to our evaluation, Stable Cascade performs best in both prompt alignment and aesthetic quality in almost all 
 comparisons. The above picture shows the results from a human evaluation using a mix of parti-prompts (link) and 
-aesthetic prompts. Specifically, the comparison was held against Playground v2, SDXL Turbo, SDXL and Würstchen v2.
+aesthetic prompts. Specifically, Stable Cascade (30 inference steps) was compared against Playground v2 (50 inference 
+steps), SDXL (50 inference steps), SDXL Turbo (1 inference step) and Würstchen v2 (30 inference steps).
 
 ## Code Example
 ```python
