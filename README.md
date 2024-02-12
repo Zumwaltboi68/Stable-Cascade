@@ -65,6 +65,11 @@ aesthetic prompts. Specifically, Stable Cascade (30 inference steps) was compare
 steps), SDXL (50 inference steps), SDXL Turbo (1 inference step) and Würstchen v2 (30 inference steps).
 
 ## Code Example
+```shell
+#install `diffusers` from this branch while the PR is WIP
+pip install git+https://github.com/kashif/diffusers.git@wuerstchen-v3
+```
+
 ```python
 import torch
 from diffusers import StableCascadeDecoderPipeline, StableCascadePriorPipeline
@@ -73,7 +78,7 @@ device = "cuda"
 dtype = torch.bfloat16
 num_images_per_prompt = 2
 
-prior = StableCascadePriorPipeline.from_pretrained("stabilityai/stable-cascade", torch_dtype=dtype).to(device)
+prior = StableCascadePriorPipeline.from_pretrained("stabilityai/stable-cascade-prior", torch_dtype=dtype).to(device)
 decoder = StableCascadeDecoderPipeline.from_pretrained("stabilityai/stable-cascade",  torch_dtype=dtype).to(device)
 
 prompt = "Anthropomorphic cat dressed as a pilot"

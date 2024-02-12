@@ -1,0 +1,26 @@
+{
+  "_class_name": "StableCascadeDecoderPipeline",
+  "_diffusers_version": "0.26.0.dev0",
+  "_name_or_path": "StableCascade/",
+  "decoder": [
+    "stable_cascade",
+    "StableCascadeUnet"
+  ],
+  "latent_dim_scale": 10.67,
+  "scheduler": [
+    "diffusers",
+    "DDPMWuerstchenScheduler"
+  ],
+  "text_encoder": [
+    "transformers",
+    "CLIPTextModelWithProjection"
+  ],
+  "tokenizer": [
+    "transformers",
+    "CLIPTokenizerFast"
+  ],
+  "vqgan": [
+    "wuerstchen",
+    "PaellaVQModel"
+  ]
+}
