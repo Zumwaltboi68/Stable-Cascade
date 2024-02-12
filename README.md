@@ -65,8 +65,8 @@ aesthetic prompts. Specifically, Stable Cascade (30 inference steps) was compare
 steps), SDXL (50 inference steps), SDXL Turbo (1 inference step) and Würstchen v2 (30 inference steps).
 
 ## Code Example
+Iinstall `diffusers` from this branch while the PR is WIP.
 ```shell
-#install `diffusers` from this branch while the PR is WIP
 pip install git+https://github.com/kashif/diffusers.git@wuerstchen-v3
 ```
 
