@@ -85,7 +85,7 @@ prompt = "Anthropomorphic cat dressed as a pilot"
 negative_prompt = ""
 
 with torch.cuda.amp.autocast(dtype=dtype):
-    prior_output = prior_pipeline(
+    prior_output = prior(
         prompt=prompt,
         height=1024,
         width=1024,
@@ -93,7 +93,7 @@ with torch.cuda.amp.autocast(dtype=dtype):
         guidance_scale=4.0,
         num_images_per_prompt=num_images_per_prompt,
     )
-    decoder_output = decoder_pipeline(
+    decoder_output = decoder(
         image_embeddings=prior_output.image_embeddings,
         prompt=prompt,
         negative_prompt=negative_prompt,
