@@ -84,7 +84,7 @@ decoder = StableCascadeDecoderPipeline.from_pretrained("stabilityai/stable-casca
 prompt = "Anthropomorphic cat dressed as a pilot"
 negative_prompt = ""
 
-with torch.cuda.amp.autocast(dtype=torch.bfloat16):
+with torch.cuda.amp.autocast(dtype=dtype):
     prior_output = prior_pipeline(
         prompt=prompt,
         height=1024,
